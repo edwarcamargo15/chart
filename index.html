@@ -2,9 +2,11 @@
 <html>
 <head>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+	<script type="text/javascript" src="moment.js"></script>
 	<title>Chart.js</title>
 </head>
-<body>
+<body class="chart" style="width: 400px; height: 400px;">
 <canvas id="myChart" width="400" height="400"></canvas>
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -44,6 +46,11 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+var char = moment('1995-05-15').format('dddd' + 'DD'+ ' of ' + 'MMM' + 'YYYY');
+console.log(char.toString());
+document.write(char);
 </script>
+
 </body>
 </html>
